@@ -1,0 +1,20 @@
+<div ngbDropdown class="d-inline-block">
+  <a href="javascript:void(0)" class="nav-link pr-0 leading-none" id="dropdownBasic1" ngbDropdownToggle>
+    <img src="assets/img/no-image.png" class="avatar" >
+    <span class="ml-2 d-none d-lg-block">
+      <span class="text-default"></span>
+    </span>
+  </a>
+  <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+    <a class="dropdown-item" href="#" [routerLink]="['/profile']">
+      <i class="dropdown-icon fe fe-user"></i> Profile
+    </a>
+    <a class="dropdown-item" href="#" [routerLink]="['/settings']">
+      <i class="dropdown-icon fe fe-settings"></i> Settings
+    </a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#" [routerLink]="['/about']">
+      <i class="dropdown-icon fe fe-info"></i> About
+    </a>
+  </div>
+</div>

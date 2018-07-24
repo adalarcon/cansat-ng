@@ -1,16 +1,19 @@
 {
   "name": "cansat-ng",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
+    "start": "npm run serve ",
+    "serve": "ng serve --o --port 4800",
+    "build": "npm run build:ng",
+    "build:ng": "ng build --output-path=../cansat-server/public",
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
+    "@agm/core": "^1.0.0-beta.3",
     "@angular/animations": "^6.0.0",
     "@angular/common": "^6.0.0",
     "@angular/compiler": "^6.0.0",
@@ -20,7 +23,13 @@
     "@angular/platform-browser": "^6.0.0",
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/router": "^6.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^2.0.0",
+    "bootstrap": "^4.0.0",
+    "chart.js": "^2.7.2",
     "core-js": "^2.5.4",
+    "font-awesome": "^4.7.0",
+    "ng-bootstrap": "^1.6.3",
+    "primeng": "^5.2.4",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },
