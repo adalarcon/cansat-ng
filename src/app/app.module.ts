@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { ROUTING } from "./app.routes";
 import { HttpClientModule } from '@angular/common/http';
 
+import { environment } from '../environments/environment';
+
+
 import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
 
 import { AppComponent } from './app.component';
@@ -15,6 +18,7 @@ import { AgmCoreModule } from '@agm/core';
 import { MainLayoutComponent } from './components/layout/main/main-layout.component';
 import { MenuComponent } from './components/layout/main/menu/menu.component';
 import { HeaderComponent } from './components/layout/main/header/header.component';
+import { AvatarComponent } from './components/layout/main/avatar/avatar.component';
 import { FooterComponent } from './components/layout/main/footer/footer.component';
 import { ContentComponent } from './components/layout/main/content/content.component';
 import { CleanLayoutComponent } from './components/layout/clean/clean-layout.component';
@@ -34,6 +38,7 @@ import { IMUComponent } from './components/imu/imu.component';
     MenuComponent,
     HeaderComponent,
     FooterComponent,
+    AvatarComponent,
     ContentComponent,
     HomeComponent,
     AccelerometerComponent,
@@ -51,7 +56,7 @@ import { IMUComponent } from './components/imu/imu.component';
       apiKey: 'AIzaSyCDg3Orzu4YR0zDyeHxtvk5Yic8IvnIbKE'
     }),
     SocketIoModule.forRoot(
-      { url: 'http://localhost:3800/api/v1/io/logs?s=ui', options: {} }
+      { url: environment.serverBaseURL + environment.api + 'io/logs?s=ui', options: {} }
     ),
     ROUTING
   ],

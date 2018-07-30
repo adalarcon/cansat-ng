@@ -4,8 +4,10 @@
   "scripts": {
     "start": "npm run serve ",
     "serve": "ng serve --o --port 4800",
-    "build": "npm run build:ng",
-    "build:ng": "ng build --output-path=../cansat-server/public",
+    "build":        "npm run build:ng",
+    "build:prod":   "npm run build:ng:prod",
+    "build:ng":     "ng build --output-path=../cansat-server/public",
+    "build:ng:prod": "ng build --prod --output-path=../cansat-server/public",
     "ng": "ng",
     "test": "ng test",
     "lint": "ng lint",

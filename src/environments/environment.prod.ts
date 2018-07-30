@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  serverBaseURL: 'http://localhost:3800',
+  serverBaseURL: 'https://cansat.herokuapp.com',
   api: '/api/v1/',
 };
