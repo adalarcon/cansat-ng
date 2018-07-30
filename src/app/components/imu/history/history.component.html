@@ -1,0 +1,112 @@
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">History</h3>
+    <div class="card-options">
+      <button type="button" class="btn btn-default" (click)="onBack()" name="button">
+        Back
+      </button>
+      <button type="button" class="btn btn-default" (click)="onNext()" name="button">
+        Next
+      </button>
+      <button type="button" class="btn btn-default" (click)="onRefresh()" name="button">
+        <i class="fa fa-refresh"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Gyroscope</h3>
+        <div class="card-options">
+
+        </div>
+      </div>
+      <div class="card-table">
+
+        <table class="table card-table table-hover">
+          <thead>
+            <tr>
+              <th>X</th>
+              <th>Y</th>
+              <th>Z</th>
+              <th>date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of imu">
+              <td>{{item.data.gyroscope.x || 0}}</td>
+              <td>{{item.data.gyroscope.y || 0}}</td>
+              <td>{{item.data.gyroscope.z || 0}}</td>
+              <td>{{item.timestamp | date:'dd/mm/yy hh:mm'}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Accelerometer</h3>
+        <div class="card-options">
+          <button type="button" class="btn btn-default" (click)="onRefresh()" name="button">
+            <i class="fa fa-refresh"></i>
+          </button>
+        </div>
+      </div>
+      <div class="card-table">
+        <table class="table card-table table-hover">
+          <thead>
+            <tr>
+              <th>X</th>
+              <th>Y</th>
+              <th>Z</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of imu">
+              <td>{{item.data.accelerometer.x || 0}}</td>
+              <td>{{item.data.accelerometer.y || 0}}</td>
+              <td>{{item.data.accelerometer.z || 0}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Magnetometer</h3>
+        <div class="card-options">
+          <button type="button" class="btn btn-default" (click)="onRefresh()" name="button">
+            <i class="fa fa-refresh"></i>
+          </button>
+        </div>
+      </div>
+      <div class="card-table">
+        <table class="table card-table table-hover">
+          <thead>
+            <tr>
+              <th>X</th>
+              <th>Y</th>
+              <th>Z</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of imu">
+              <td>{{item.data.magnetometer.x || 0}}</td>
+              <td>{{item.data.magnetometer.y || 0}}</td>
+              <td>{{item.data.magnetometer.z || 0}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

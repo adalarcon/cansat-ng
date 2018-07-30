@@ -28,6 +28,7 @@ import { GpsComponent } from './components/gps/gps.component';
 import { GyroscopeComponent } from './components/imu/gyroscope/gyroscope.component';
 import { MagnetometerComponent } from './components/imu/magnetometer/magnetometer.component';
 import { IMUComponent } from './components/imu/imu.component';
+import { HistoryComponent } from './components/imu/history/history.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { IMUComponent } from './components/imu/imu.component';
     GpsComponent,
     GyroscopeComponent,
     MagnetometerComponent,
-    IMUComponent
+    IMUComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,

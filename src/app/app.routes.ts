@@ -6,6 +6,7 @@ import { CleanLayoutComponent } from './components/layout/clean/clean-layout.com
 import { HomeComponent } from './components/home/home.component';
 import { IMUComponent } from './components/imu/imu.component';
 import { GpsComponent } from './components/gps/gps.component';
+import { HistoryComponent } from './components/imu/history/history.component';
 
 export const ROUTES: Routes = [
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
@@ -14,7 +15,8 @@ export const ROUTES: Routes = [
   { path: '', component: MainLayoutComponent, children:[
     { path: 'home', component: HomeComponent },
     { path: 'imu', component: IMUComponent },
-    { path: 'gps', component: GpsComponent }
+    { path: 'gps', component: GpsComponent },
+    { path: 'history', component: HistoryComponent }
   ]},
 
 ];
