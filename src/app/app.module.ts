@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { ROUTING } from "./app.routes";
 import { HttpClientModule } from '@angular/common/http';
 
+import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
+
 import { AppComponent } from './app.component';
 
 import { ChartModule } from 'primeng/chart';
@@ -17,6 +19,11 @@ import { FooterComponent } from './components/layout/main/footer/footer.componen
 import { ContentComponent } from './components/layout/main/content/content.component';
 import { CleanLayoutComponent } from './components/layout/clean/clean-layout.component';
 import { HomeComponent } from './components/home/home.component';
+import { AccelerometerComponent } from './components/imu/accelerometer/accelerometer.component';
+import { GpsComponent } from './components/gps/gps.component';
+import { GyroscopeComponent } from './components/imu/gyroscope/gyroscope.component';
+import { MagnetometerComponent } from './components/imu/magnetometer/magnetometer.component';
+import { IMUComponent } from './components/imu/imu.component';
 
 
 @NgModule({
@@ -28,7 +35,12 @@ import { HomeComponent } from './components/home/home.component';
     HeaderComponent,
     FooterComponent,
     ContentComponent,
-    HomeComponent
+    HomeComponent,
+    AccelerometerComponent,
+    GpsComponent,
+    GyroscopeComponent,
+    MagnetometerComponent,
+    IMUComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +50,9 @@ import { HomeComponent } from './components/home/home.component';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCDg3Orzu4YR0zDyeHxtvk5Yic8IvnIbKE'
     }),
+    SocketIoModule.forRoot(
+      { url: 'http://localhost:3800/api/v1/io/logs?s=ui', options: {} }
+    ),
     ROUTING
   ],
   providers: [],
