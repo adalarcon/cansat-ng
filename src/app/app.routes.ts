@@ -7,6 +7,8 @@ import { HomeComponent } from './components/home/home.component';
 import { IMUComponent } from './components/imu/imu.component';
 import { GpsComponent } from './components/gps/gps.component';
 import { HistoryComponent } from './components/imu/history/history.component';
+import { DisplayComponent } from './components/display/display.component';
+
 
 export const ROUTES: Routes = [
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
@@ -16,7 +18,9 @@ export const ROUTES: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'imu', component: IMUComponent },
     { path: 'gps', component: GpsComponent },
-    { path: 'history', component: HistoryComponent }
+    { path: 'history', component: HistoryComponent },
+    { path: 'display', component: DisplayComponent }
+
   ]},
 
 ];

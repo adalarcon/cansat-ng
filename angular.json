@@ -29,7 +29,14 @@
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/chart.js/dist/Chart.js"
+              "node_modules/chart.js/dist/Chart.js",
+              "src/assets/js/gl-matrix.js",
+              "src/assets/js/phoria-util.js",
+              "src/assets/js/phoria-entity.js",
+              "src/assets/js/phoria-scene.js",
+              "src/assets/js/phoria-renderer.js",
+              "src/assets/js/phoria-view.js",
+              "src/assets/js/dat.gui.min.js"
             ]
           },
           "configurations": {
