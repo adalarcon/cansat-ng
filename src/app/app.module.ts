@@ -11,6 +11,8 @@ import { AppComponent } from './app.component';
 
 import { ChartModule } from 'primeng/chart';
 import { GMapModule } from 'primeng/gmap';
+import { GaugeChartComponent } from 'angular-gauge-chart'
+
 
 import { AgmCoreModule } from '@agm/core';
 
@@ -29,6 +31,10 @@ import { MagnetometerComponent } from './components/imu/magnetometer/magnetomete
 import { IMUComponent } from './components/imu/imu.component';
 import { HistoryComponent } from './components/imu/history/history.component';
 import { DisplayComponent } from './components/display/display.component';
+import { BpmComponent } from './components/bpm/bpm.component';
+import { DphComponent } from './components/dph/dph.component';
+import { ImComponent } from './components/im/im.component';
+import { SwComponent } from './components/sw/sw.component';
 
 
 @NgModule({
@@ -48,7 +54,12 @@ import { DisplayComponent } from './components/display/display.component';
     MagnetometerComponent,
     IMUComponent,
     HistoryComponent,
-    DisplayComponent
+    DisplayComponent,
+    BpmComponent,
+    DphComponent,
+    ImComponent,
+    SwComponent,
+    GaugeChartComponent
   ],
   imports: [
     BrowserModule,
