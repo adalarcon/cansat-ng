@@ -8,6 +8,11 @@ import { Socket }            from 'ng-socket-io';
 })
 export class GpsComponent implements OnInit {
 
+  //{"type": "gps", "data": { "latitude":28.7030790,"longitude":-106.1407600,  "f_altitude":1564.50,"f_course": 71.00, "f_speed_kmph": 0.89, "satellites": 4          }}
+
+  //f_speed_kmph line
+
+  
   constructor(
     private socket: Socket,
   ) { }

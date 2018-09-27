@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImComponent implements OnInit {
 
+  // Temperatura Interior
+
+  // {"type": "lm35", "data": {"temperature": 21.00}}
+
+
+
   constructor() { }
 
   ngOnInit() {
