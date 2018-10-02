@@ -12,7 +12,7 @@ export class GpsComponent implements OnInit {
 
   //f_speed_kmph line
 
-  
+
   constructor(
     private socket: Socket,
   ) { }
@@ -23,13 +23,14 @@ export class GpsComponent implements OnInit {
 
   ngOnInit() {
 
-    this.socket.fromEvent("gps").subscribe( data => {
+    this.socket.on("gps", (data) => {
       console.log(data)
       this.latitude = data['data'].latitude;
       this.longitude = data['data'].longitude;
     });
 
-    this.socket.fromEvent("message").subscribe( data => {
+
+    this.socket.on("message", (data) => {
       console.log("[on][message] incoming message ", data);
     });
 

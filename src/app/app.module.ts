@@ -6,15 +6,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { environment } from '../environments/environment';
 
 import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
-
-import { AppComponent } from './app.component';
-
 import { ChartModule } from 'primeng/chart';
 import { GMapModule } from 'primeng/gmap';
 import { GaugeChartComponent } from 'angular-gauge-chart'
-
-
 import { AgmCoreModule } from '@agm/core';
+
+import { AppComponent } from './app.component';
 
 import { MainLayoutComponent } from './components/layout/main/main-layout.component';
 import { MenuComponent } from './components/layout/main/menu/menu.component';
@@ -24,17 +21,20 @@ import { FooterComponent } from './components/layout/main/footer/footer.componen
 import { ContentComponent } from './components/layout/main/content/content.component';
 import { CleanLayoutComponent } from './components/layout/clean/clean-layout.component';
 import { HomeComponent } from './components/home/home.component';
-import { AccelerometerComponent } from './components/imu/accelerometer/accelerometer.component';
-import { GpsComponent } from './components/gps/gps.component';
-import { GyroscopeComponent } from './components/imu/gyroscope/gyroscope.component';
-import { MagnetometerComponent } from './components/imu/magnetometer/magnetometer.component';
-import { IMUComponent } from './components/imu/imu.component';
-import { HistoryComponent } from './components/imu/history/history.component';
+import { HistoryComponent } from './components/history/history.component';
+import { AccelerometerComponent } from './components/sensors/accelerometer/accelerometer.component';
+import { GpsComponent } from './components/sensors/gps/gps.component';
+import { GyroscopeComponent } from './components/sensors/gyroscope/gyroscope.component';
+import { MagnetometerComponent } from './components/sensors/magnetometer/magnetometer.component';
+import { SensorsComponent } from './components/sensors/sensors.component';
 import { DisplayComponent } from './components/display/display.component';
-import { BpmComponent } from './components/bpm/bpm.component';
-import { DphComponent } from './components/dph/dph.component';
-import { ImComponent } from './components/im/im.component';
-import { SwComponent } from './components/sw/sw.component';
+import { AltitudeComponent } from './components/sensors/altitude/altitude.component';
+import { PresionComponent } from './components/sensors/presion/presion.component';
+import { HumidityComponent } from './components/sensors/humidity/humidity.component';
+import { TemperatureOutComponent } from './components/sensors/temperature-out/temperature-out.component';
+import { TemperatureInComponent } from './components/sensors/temperature-in/temperature-in.component';
+import { VibrationComponent } from './components/sensors/vibration/vibration.component';
+import { VoltageComponent } from './components/sensors/voltage/voltage.component';
 
 
 @NgModule({
@@ -52,14 +52,17 @@ import { SwComponent } from './components/sw/sw.component';
     GpsComponent,
     GyroscopeComponent,
     MagnetometerComponent,
-    IMUComponent,
+    SensorsComponent,
     HistoryComponent,
     DisplayComponent,
-    BpmComponent,
-    DphComponent,
-    ImComponent,
-    SwComponent,
-    GaugeChartComponent
+    GaugeChartComponent,
+    AltitudeComponent,
+    PresionComponent,
+    HumidityComponent,
+    TemperatureOutComponent,
+    TemperatureInComponent,
+    VibrationComponent,
+    VoltageComponent
   ],
   imports: [
     BrowserModule,

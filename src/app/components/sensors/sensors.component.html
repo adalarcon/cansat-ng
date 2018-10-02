@@ -1,0 +1,40 @@
+
+<div class="row">
+
+  <div class="col-md-3">
+    <app-humidity [humidity]="humidity"></app-humidity>
+  </div>
+  <div class="col-md-3">
+    <app-presion [presion]="presion"></app-presion>
+  </div>
+
+  <div class="col-md-3">
+    <app-temperature-out [temperature]="temperatureOut"></app-temperature-out>
+  </div>
+  <div class="col-md-3">
+    <app-temperature-in [temperature]="temperatureIn"></app-temperature-in>
+  </div>
+  <div class="col-md-3">
+    <app-voltage [voltage]="voltage"></app-voltage>
+  </div>
+
+
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <app-altitude [altitude]="altitude"></app-altitude>
+  </div>
+  <div class="col-md-6">
+    <app-vibration [vibration]="vibration"></app-vibration>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <app-accelerometer [data]="data"></app-accelerometer>
+  </div>
+  <div class="col-md-12">
+    <app-gyroscope [data]="data"></app-gyroscope>
+  </div>
+</div>
