@@ -34,6 +34,7 @@
     "font-awesome": "^4.7.0",
     "ng-bootstrap": "^1.6.3",
     "ng-socket-io": "^0.2.4",
+    "ngx-webcam": "^0.2.0",
     "primeng": "^5.2.4",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.1.0",

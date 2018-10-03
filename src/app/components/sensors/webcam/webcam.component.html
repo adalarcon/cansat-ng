@@ -1,0 +1,49 @@
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">WebCam View</h3>
+    <div class="card-options">
+
+      <button class="btn btn-default" (click)="triggerSnapshot(dialog);">
+        <i class="fa fa-camera"></i>
+      </button>
+      <button class="btn btn-default" (click)="toggleWebcam();">
+        <i class="fa fa-eye"></i>
+
+      </button>
+      <button class="btn btn-default" (click)="showNextWebcam(true);" [disabled]="!multipleWebcamsAvailable">Next</button>
+
+      <button type="button" class="btn btn-default" (click)="onReset()" name="button">
+        <i class="fa fa-refresh"></i>
+      </button>
+    </div>
+  </div>
+  <div class="card-fit">
+    <webcam [height]="300" [width]="400" [trigger]="triggerObservable" (imageCapture)="handleImage($event)" *ngIf="showWebcam"
+            [allowCameraSwitch]="allowCameraSwitch" [switchCamera]="nextWebcamObservable"
+            [videoOptions]="videoOptions"
+            (cameraSwitched)="cameraWasSwitched($event)"
+            (initError)="handleInitError($event)"
+    ></webcam>
+
+    <ul *ngFor="let error of errors">
+      <li>{{error | json}}</li>
+    </ul>
+  </div>
+</div>
+
+<ng-template #dialog let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <button type="button" class="close" aria-label="Close" (click)="onClose('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="snapshot" *ngIf="webcamImage">
+      <img [src]="webcamImage.imageAsDataUrl"/>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="onClose('Save click')">Save</button>
+  </div>
+</ng-template>

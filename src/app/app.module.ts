@@ -4,7 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { ROUTING } from "./app.routes";
 import { HttpClientModule } from '@angular/common/http';
 
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { WebcamModule } from 'ngx-webcam';
 
 import { environment } from '../environments/environment';
 
@@ -37,6 +38,8 @@ import { TemperatureOutComponent } from './components/sensors/temperature-out/te
 import { TemperatureInComponent } from './components/sensors/temperature-in/temperature-in.component';
 import { VibrationComponent } from './components/sensors/vibration/vibration.component';
 import { VoltageComponent } from './components/sensors/voltage/voltage.component';
+import { WebcamComponent } from './components/sensors/webcam/webcam.component';
+import { Gyroscope3DComponent } from './components/sensors/gyroscope-3d/gyroscope-3d.component';
 
 
 @NgModule({
@@ -63,7 +66,9 @@ import { VoltageComponent } from './components/sensors/voltage/voltage.component
     TemperatureOutComponent,
     TemperatureInComponent,
     VibrationComponent,
-    VoltageComponent
+    VoltageComponent,
+    WebcamComponent,
+    Gyroscope3DComponent
   ],
   imports: [
     BrowserModule,
@@ -71,6 +76,7 @@ import { VoltageComponent } from './components/sensors/voltage/voltage.component
     HttpClientModule,
     GMapModule,
     FormsModule,
+    WebcamModule,
     NgbModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCDg3Orzu4YR0zDyeHxtvk5Yic8IvnIbKE'
