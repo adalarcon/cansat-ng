@@ -19,7 +19,7 @@ export class PresionComponent implements OnInit {
       needleUpdateSpeed: 1000,
       arcColors: ['rgb(179, 224, 174)'],
       rangeLabel: ['0', '200'],
-      needleStartValue: 50,
+      needleStartValue: 0,
   };
 
   constructor() { }
@@ -30,6 +30,11 @@ export class PresionComponent implements OnInit {
   ngOnChanges(){
     this.needleValue = this.presion;
     this.bottomLabel = this.presion;
+  }
+
+  onReset(){
+    this.needleValue = 0;
+    this.bottomLabel = '0';
   }
 
 }

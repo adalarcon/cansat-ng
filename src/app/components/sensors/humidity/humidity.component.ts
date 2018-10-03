@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-humidity',
@@ -13,20 +14,25 @@ export class HumidityComponent implements OnInit {
   @Input() humidity:any;
 
   public canvasWidth = 200
-  public needleValue = 65
+  public needleValue = 0
   public centralLabel = ''
   public name = 'Humidity (%)'
   public bottomLabel = '65'
-  public options = {
+  rangeMin = '0';
+  rangeMax = '101';
+  options = {
       hasNeedle: true,
       needleColor: 'gray',
       needleUpdateSpeed: 1000,
       arcColors: ['rgb(166, 206, 227)'],
-      rangeLabel: ['0', '100'],
-      needleStartValue: 50,
+      rangeLabel: [this.rangeMin, this.rangeMax],
+      needleStartValue: 0,
   };
 
-  constructor() { }
+  range=[];
+  modal: any;
+
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
   }
@@ -34,6 +40,11 @@ export class HumidityComponent implements OnInit {
   ngOnChanges(){
     this.needleValue = this.humidity;
     this.bottomLabel = this.humidity;
+  }
+
+  onReset(){
+    this.needleValue = 0;
+    this.bottomLabel = '0';
   }
 
 }

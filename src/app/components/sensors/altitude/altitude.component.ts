@@ -45,5 +45,11 @@ export class AltitudeComponent implements OnInit {
     this.chart.refresh();
   }
 
+  onReset(){
+    this.data.labels= [];
+    this.data.datasets[0].data= [];
+    this.chart.refresh();
+  }
+
 
 }

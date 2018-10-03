@@ -12,7 +12,7 @@ export class TemperatureInComponent implements OnInit {
   @Input() temperature:any;
 
   public canvasWidth = 200
-  public needleValue = 33;
+  public needleValue = this.temperature;
   public centralLabel = ''
   public name = 'Temperature (℃)'
   public bottomLabel = '65'
@@ -23,7 +23,7 @@ export class TemperatureInComponent implements OnInit {
       arcColors: ["rgb(61,204,91)","rgb(239,214,19)","rgb(255,84,84)"],
     	arcDelimiters: [30,70],
       rangeLabel: ['0', '100'],
-      needleStartValue: 50,
+      needleStartValue: 0,
   };
 
   constructor() { }
@@ -34,6 +34,11 @@ export class TemperatureInComponent implements OnInit {
   ngOnChanges(){
     this.needleValue = this.temperature;
     this.bottomLabel = this.temperature;
+  }
+
+  onReset(){
+    this.needleValue = 0;
+    this.bottomLabel = '0';
   }
 
 }

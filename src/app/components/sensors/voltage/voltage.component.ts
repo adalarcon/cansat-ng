@@ -35,4 +35,9 @@ export class VoltageComponent implements OnInit {
     this.bottomLabel = this.voltage;
   }
 
+  onReset(){
+    this.needleValue = 0;
+    this.bottomLabel = '0';
+  }
+
 }

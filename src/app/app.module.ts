@@ -1,7 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { ROUTING } from "./app.routes";
 import { HttpClientModule } from '@angular/common/http';
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { environment } from '../environments/environment';
 
@@ -27,7 +30,6 @@ import { GpsComponent } from './components/sensors/gps/gps.component';
 import { GyroscopeComponent } from './components/sensors/gyroscope/gyroscope.component';
 import { MagnetometerComponent } from './components/sensors/magnetometer/magnetometer.component';
 import { SensorsComponent } from './components/sensors/sensors.component';
-import { DisplayComponent } from './components/display/display.component';
 import { AltitudeComponent } from './components/sensors/altitude/altitude.component';
 import { PresionComponent } from './components/sensors/presion/presion.component';
 import { HumidityComponent } from './components/sensors/humidity/humidity.component';
@@ -54,7 +56,6 @@ import { VoltageComponent } from './components/sensors/voltage/voltage.component
     MagnetometerComponent,
     SensorsComponent,
     HistoryComponent,
-    DisplayComponent,
     GaugeChartComponent,
     AltitudeComponent,
     PresionComponent,
@@ -69,6 +70,8 @@ import { VoltageComponent } from './components/sensors/voltage/voltage.component
     ChartModule,
     HttpClientModule,
     GMapModule,
+    FormsModule,
+    NgbModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCDg3Orzu4YR0zDyeHxtvk5Yic8IvnIbKE'
     }),
