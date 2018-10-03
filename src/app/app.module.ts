@@ -12,7 +12,7 @@ import { environment } from '../environments/environment';
 import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
 import { ChartModule } from 'primeng/chart';
 import { GMapModule } from 'primeng/gmap';
-import { GaugeChartComponent } from 'angular-gauge-chart'
+import { GaugeChartModule } from 'angular-gauge-chart'
 import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
@@ -59,7 +59,6 @@ import { Gyroscope3DComponent } from './components/sensors/gyroscope-3d/gyroscop
     MagnetometerComponent,
     SensorsComponent,
     HistoryComponent,
-    GaugeChartComponent,
     AltitudeComponent,
     PresionComponent,
     HumidityComponent,
@@ -77,6 +76,7 @@ import { Gyroscope3DComponent } from './components/sensors/gyroscope-3d/gyroscop
     GMapModule,
     FormsModule,
     WebcamModule,
+    GaugeChartModule,
     NgbModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCDg3Orzu4YR0zDyeHxtvk5Yic8IvnIbKE'

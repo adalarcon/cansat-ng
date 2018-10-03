@@ -78,4 +78,12 @@ export class WebcamComponent implements OnInit {
     return this.nextWebcam.asObservable();
   }
 
+  onClose(){
+    this.modal.close("close");
+  }
+
+  onReset(){
+
+  }
+
 }

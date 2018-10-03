@@ -18,7 +18,7 @@ export class PresionComponent implements OnInit {
       needleColor: 'gray',
       needleUpdateSpeed: 1000,
       arcColors: ['rgb(179, 224, 174)'],
-      rangeLabel: ['0', '200'],
+      rangeLabel: ['0', '1500'],
       needleStartValue: 0,
   };
 
