@@ -31,7 +31,7 @@ export class VoltageComponent implements OnInit {
   }
 
   ngOnChanges(){
-    this.needleValue = this.voltage;
+    this.needleValue = (this.voltage * 100 /8);
     this.bottomLabel = this.voltage;
   }
 

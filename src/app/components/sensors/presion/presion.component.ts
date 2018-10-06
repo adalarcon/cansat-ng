@@ -28,7 +28,7 @@ export class PresionComponent implements OnInit {
   }
 
   ngOnChanges(){
-    this.needleValue = this.presion;
+    this.needleValue = (this.presion * 100 /1500);
     this.bottomLabel = this.presion;
   }
 

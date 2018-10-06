@@ -15,12 +15,13 @@ export class SensorsComponent implements OnInit {
 
   data: any;
   altitude: any = 22;
-  presion: any = 33;
+  presion: any = 1000;
   humidity:any = 44;
   temperatureOut: any=55;
   temperatureIn: any=66;
   vibration: any = 77;
   voltage: any = 7;
+  gps: any;
 
 
   ngOnInit() {
@@ -49,6 +50,10 @@ export class SensorsComponent implements OnInit {
 
     this.socket.on("volt", res => {
       this.voltage = res.data.volt;
+    });
+
+    this.socket.on("gps", res => {
+      this.gps = res['data'];
     });
 
     this.socket.on("message", data => {

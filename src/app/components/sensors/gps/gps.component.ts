@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { Socket }            from 'ng-socket-io';
 
 
@@ -6,41 +6,33 @@ import { Socket }            from 'ng-socket-io';
   selector: 'app-gps',
   templateUrl: './gps.component.html',
 })
-export class GpsComponent implements OnInit {
+export class GpsComponent implements OnInit, OnChanges {
 
   //{"type": "gps", "data": { "latitude":28.7030790,"longitude":-106.1407600,  "f_altitude":1564.50,"f_course": 71.00, "f_speed_kmph": 0.89, "satellites": 4          }}
 
   //f_speed_kmph line
+  @Input() gps:any;
 
-
-  constructor(
-    private socket: Socket,
-  ) { }
+  constructor() { }
 
   latitude: number = 0;
   longitude: number = 0;
+  satellites: number = 0;
+  speed: number = 0;
+
   zoom: number = 15;
 
   ngOnInit() {
 
-    this.socket.on("gps", (data) => {
-      console.log(data)
-      this.latitude = data['data'].latitude;
-      this.longitude = data['data'].longitude;
-    });
+  }
 
-
-    this.socket.on("message", (data) => {
-      console.log("[on][message] incoming message ", data);
-    });
-
-    this.socket.on("connect", ()=> {
-      console.log("[on][connect] Conected to socket");
-    });
-
-    this.socket.on('error', error => {
-      console.log("[on][error]", error);
-    });
+  ngOnChanges(){
+    if(this.gps){
+      this.latitude= this.gps.latitude;
+      this.longitude = this.gps.longitude;
+      this.satellites = this.gps.satellites;
+      this.speed = this.gps.speed;
+    }
   }
 
 }

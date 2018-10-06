@@ -40,6 +40,7 @@ import { VibrationComponent } from './components/sensors/vibration/vibration.com
 import { VoltageComponent } from './components/sensors/voltage/voltage.component';
 import { WebcamComponent } from './components/sensors/webcam/webcam.component';
 import { Gyroscope3DComponent } from './components/sensors/gyroscope-3d/gyroscope-3d.component';
+import { SpeedComponent } from './components/sensors/speed/speed.component';
 
 
 @NgModule({
@@ -67,7 +68,8 @@ import { Gyroscope3DComponent } from './components/sensors/gyroscope-3d/gyroscop
     VibrationComponent,
     VoltageComponent,
     WebcamComponent,
-    Gyroscope3DComponent
+    Gyroscope3DComponent,
+    SpeedComponent
   ],
   imports: [
     BrowserModule,

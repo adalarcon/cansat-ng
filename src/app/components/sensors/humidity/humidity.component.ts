@@ -19,7 +19,7 @@ export class HumidityComponent implements OnInit {
   public name = 'Humidity (%)'
   public bottomLabel = '65'
   rangeMin = '0';
-  rangeMax = '101';
+  rangeMax = '100';
   options = {
       hasNeedle: true,
       needleColor: 'gray',
