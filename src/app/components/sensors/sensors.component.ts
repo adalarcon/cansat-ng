@@ -13,7 +13,6 @@ export class SensorsComponent implements OnInit {
     private socket: Socket,
   ) { }
 
-  data: any;
   altitude: any = 22;
   presion: any = 1000;
   humidity:any = 44;
@@ -22,12 +21,14 @@ export class SensorsComponent implements OnInit {
   vibration: any = 77;
   voltage: any = 7;
   gps: any;
-
+  accelerometer: any;
+  gyroscope: any;
 
   ngOnInit() {
 
-    this.socket.on("imu", data => {
-      this.data = data;
+    this.socket.on("imu", res => {
+      this.accelerometer = res.data.accelerometer;
+      this.gyroscope = res.data.gyroscope;
     });
 
     this.socket.on("b180", res => {

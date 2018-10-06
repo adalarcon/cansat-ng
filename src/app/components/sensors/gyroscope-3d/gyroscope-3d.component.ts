@@ -11,7 +11,7 @@ import "three/examples/js/loaders/ColladaLoader";
 })
 export class Gyroscope3DComponent implements OnInit, OnChanges, AfterViewInit {
 
-  @Input() data:any;
+  @Input() gyroscope:any;
   @ViewChild('canvas') private canvasRef: ElementRef;
 
 
@@ -163,19 +163,19 @@ export class Gyroscope3DComponent implements OnInit, OnChanges, AfterViewInit {
   }
 
   ngOnChanges(){
-    this.onRun(this.data);
+    this.onRun(this.gyroscope);
   }
 
 
-  onRun(data){
+  onRun(gyroscope){
     console.log("onRun", this.cont)
-    console.log("onRun", data)
+    console.log("onRun", gyroscope)
 
-    if(data){
+    if(gyroscope){
 
-      this.dataRollx = (data.data.gyroscope.x *= this.orderOfMag).toFixed(this.accuracy);
-      this.dataRolly = (data.data.gyroscope.y *= this.orderOfMag).toFixed(this.accuracy);
-      this.dataRollz = (data.data.gyroscope.z *= this.orderOfMag).toFixed(this.accuracy);
+      this.dataRollx = (gyroscope.x *= this.orderOfMag).toFixed(this.accuracy);
+      this.dataRolly = (gyroscope.y *= this.orderOfMag).toFixed(this.accuracy);
+      this.dataRollz = (gyroscope.z *= this.orderOfMag).toFixed(this.accuracy);
       this.render();
     }
 

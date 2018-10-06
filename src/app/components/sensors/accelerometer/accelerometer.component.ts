@@ -14,7 +14,7 @@ export class AccelerometerComponent implements OnInit, OnChanges {
 
   ) { }
 
-  @Input() data:any;
+  @Input() accelerometer:any;
 
   @ViewChild('chart1') chart1;
   @ViewChild('chart2') chart2;
@@ -62,20 +62,20 @@ export class AccelerometerComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(){
-    this.onRun(this.data);
+    this.onRun(this.accelerometer);
   }
 
-  onRun(data){
+  onRun(accelerometer){
     console.log("onRun", this.cont)
 
-    if(data){
+    if(accelerometer){
 
       this.dataX.labels.push(this.cont)
       this.dataY.labels.push(this.cont)
       this.dataZ.labels.push(this.cont)
-      this.dataX.datasets[0].data.push(data.data.accelerometer.x)
-      this.dataY.datasets[0].data.push(data.data.accelerometer.y)
-      this.dataZ.datasets[0].data.push(data.data.accelerometer.z)
+      this.dataX.datasets[0].data.push(accelerometer.x)
+      this.dataY.datasets[0].data.push(accelerometer.y)
+      this.dataZ.datasets[0].data.push(accelerometer.z)
       this.cont++
 
       this.chart1.refresh();

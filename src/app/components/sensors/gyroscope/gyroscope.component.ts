@@ -6,7 +6,7 @@ import { AfterViewInit,OnInit, OnChanges, Component, ElementRef, Input, ViewChil
 })
 export class GyroscopeComponent implements OnInit, OnChanges, AfterViewInit {
 
-  @Input() data:any;
+  @Input() gyroscope:any;
   @ViewChild('canvas') private canvasRef: ElementRef;
   @ViewChild('chart1') chart1;
   @ViewChild('chart2') chart2;
@@ -59,19 +59,19 @@ export class GyroscopeComponent implements OnInit, OnChanges, AfterViewInit {
   }
 
   ngOnChanges(){
-    this.onRun(this.data);
+    this.onRun(this.gyroscope);
   }
 
 
-  onRun(data){
+  onRun(gyroscope){
     console.log("onRun", this.cont)
-    if(data){
+    if(gyroscope){
       this.dataX.labels.push(this.cont)
       this.dataY.labels.push(this.cont)
       this.dataZ.labels.push(this.cont)
-      this.dataX.datasets[0].data.push(data.data.gyroscope.x)
-      this.dataY.datasets[0].data.push(data.data.gyroscope.y)
-      this.dataZ.datasets[0].data.push(data.data.gyroscope.z)
+      this.dataX.datasets[0].data.push(gyroscope.x)
+      this.dataY.datasets[0].data.push(gyroscope.y)
+      this.dataZ.datasets[0].data.push(gyroscope.z)
       this.cont++
 
       this.chart1.refresh();
