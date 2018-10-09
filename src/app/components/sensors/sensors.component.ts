@@ -38,11 +38,11 @@ export class SensorsComponent implements OnInit {
 
     this.socket.on("dth", res => {
       this.humidity = res.data.humidity;
-      this.temperatureOut = res.data.temperature;
+      this.temperatureIn = res.data.temperature;
     });
 
     this.socket.on("lm35", res => {
-      this.temperatureIn = res.data.temperature;
+      this.temperatureOut = res.data.temperature;
     });
 
     this.socket.on("sw", res => {

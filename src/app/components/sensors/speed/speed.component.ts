@@ -16,7 +16,7 @@ export class SpeedComponent implements OnInit, OnChanges {
   public canvasWidth = 200
   public needleValue = 0;
   public centralLabel = ''
-  public name = 'Speed (kmph)'
+  public name = 'Speed (m/s)'
   public bottomLabel = '0'
   public options = {
       hasNeedle: true,
