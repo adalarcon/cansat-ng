@@ -41,6 +41,16 @@ import { VoltageComponent } from './components/sensors/voltage/voltage.component
 import { WebcamComponent } from './components/sensors/webcam/webcam.component';
 import { Gyroscope3DComponent } from './components/sensors/gyroscope-3d/gyroscope-3d.component';
 import { SpeedComponent } from './components/sensors/speed/speed.component';
+import { AccelerometerHistoryComponent } from './components/history/accelerometer-history/accelerometer-history.component';
+import { AltitudeHistoryComponent } from './components/history/altitude-history/altitude-history.component';
+import { GPSHistoryComponent } from './components/history/gps-history/gps-history.component';
+import { GyroscopeHistoryComponent } from './components/history/gyroscope-history/gyroscope-history.component';
+import { HumidityHistoryComponent } from './components/history/humidity-history/humidity-history.component';
+import { PresionHistoryComponent } from './components/history/presion-history/presion-history.component';
+import { SpeedHistoryComponent } from './components/history/speed-history/speed-history.component';
+import { TemperatureHistoryComponent } from './components/history/temperature-history/temperature-history.component';
+import { VibrationHistoryComponent } from './components/history/vibration-history/vibration-history.component';
+import { VoltageHistoryComponent } from './components/history/voltage-history/voltage-history.component';
 
 
 @NgModule({
@@ -69,7 +79,17 @@ import { SpeedComponent } from './components/sensors/speed/speed.component';
     VoltageComponent,
     WebcamComponent,
     Gyroscope3DComponent,
-    SpeedComponent
+    SpeedComponent,
+    AccelerometerHistoryComponent,
+    AltitudeHistoryComponent,
+    GPSHistoryComponent,
+    GyroscopeHistoryComponent,
+    HumidityHistoryComponent,
+    PresionHistoryComponent,
+    SpeedHistoryComponent,
+    TemperatureHistoryComponent,
+    VibrationHistoryComponent,
+    VoltageHistoryComponent
   ],
   imports: [
     BrowserModule,

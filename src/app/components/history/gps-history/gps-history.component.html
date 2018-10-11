@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">GPS</h3>
+    <div class="card-options">
+      <button type="button" class="btn btn-default" (click)="onBack()" name="button">
+        Back
+      </button>
+      <button type="button" class="btn btn-default" (click)="onNext()" name="button">
+        Next
+      </button>
+      <button type="button" class="btn btn-default" (click)="onRefresh()" name="button">
+        <span class=""><i [ngClass]="{'fa-refresh-animate': isLoading}" class="fa fa-refresh"></i></span>
+      </button>
+    </div>
+  </div>
+  <div class="card-table">
+
+    <table class="table card-table table-hover">
+      <thead>
+        <tr>
+          <th>altitude</th>
+          <th>longitude</th>
+          <th>f_speed_kmph</th>
+          <th>satellites</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of list">
+          <td>{{item.data.latitude || 0}}</td>
+          <td>{{item.data.longitude || 0}}</td>
+          <td>{{item.data.f_speed_kmph || 0}}</td>
+          <td>{{item.data.satellites || 0}}</td>
+          <td>{{item.timestamp | date:'dd-MMM-yyyy hh:mm:a'}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">Accelerometer</h3>
+    <div class="card-options">
+      <button type="button" class="btn btn-default" (click)="onBack()" name="button">
+        Back
+      </button>
+      <button type="button" class="btn btn-default" (click)="onNext()" name="button">
+        Next
+      </button>
+      <button type="button" class="btn btn-default" (click)="onRefresh()" name="button">
+        <span class=""><i [ngClass]="{'fa-refresh-animate': isLoading}" class="fa fa-refresh"></i></span>
+      </button>
+    </div>
+  </div>
+  <div class="card-table">
+
+    <table class="table card-table table-hover">
+      <thead>
+        <tr>
+          <th>X</th>
+          <th>Y</th>
+          <th>Z</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of list">
+          <td>{{item.data.accelerometer.x || 0}}</td>
+          <td>{{item.data.accelerometer.y || 0}}</td>
+          <td>{{item.data.accelerometer.z || 0}}</td>
+          <td>{{item.timestamp | date:'dd-MMM-yyyy hh:mm:a'}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
