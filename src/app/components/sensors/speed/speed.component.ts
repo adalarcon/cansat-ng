@@ -32,8 +32,10 @@ export class SpeedComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(){
-    this.needleValue = (this.gps.f_speed_kmph * 100 /30);
-    this.bottomLabel = this.gps.f_speed_kmph;
+    if(this.gps){
+      this.needleValue = (this.gps.f_speed_kmph * 100 /30);
+      this.bottomLabel = this.gps.f_speed_kmph;
+    }
   }
 
   onReset(){
