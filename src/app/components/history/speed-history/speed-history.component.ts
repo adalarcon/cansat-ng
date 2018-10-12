@@ -8,7 +8,7 @@ import { DataService }       from '../../../services/data.service';
 export class SpeedHistoryComponent implements OnInit {
 
   list: Array<any>;
-  size: number = 100;
+  size: number = 10;
   index: number = 0;
   isLoading= false;
 
