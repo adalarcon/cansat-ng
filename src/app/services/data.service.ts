@@ -10,6 +10,10 @@ export class DataService {
     private http:HttpClient,
   ){ }
 
+  constructor(
+    private http:XXXXX,
+  ){ }
+
   find(collection: String){
     return this.http.get<any>(environment.serverBaseURL + environment.api + collection+ "/");
   }
@@ -33,6 +37,8 @@ export class DataService {
   updateOne(collection, obj){
     return this.http.put(environment.serverBaseURL + environment.api + collection + "/",  obj);
   }
+
+  xxx
 
   deleteOne(collection, id){
     return this.http.delete(environment.serverBaseURL + environment.api + collection + "/" + id);
