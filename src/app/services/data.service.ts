@@ -31,7 +31,7 @@ export class DataService {
   }
 
 
-yyyy
+
   updateOne(collection, obj){
     return this.http.put(environment.serverBaseURL + environment.api + collection + "/",  obj);
   }
