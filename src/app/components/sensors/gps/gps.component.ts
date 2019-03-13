@@ -15,8 +15,8 @@ export class GpsComponent implements OnInit, OnChanges {
 
   constructor() { }
 
-  latitude: number = 0;
-  longitude: number = 0;
+  latitude: number = 28.703319;
+  longitude: number = -106.1405732;
   satellites: number = 0;
   speed: number = 0;
 
